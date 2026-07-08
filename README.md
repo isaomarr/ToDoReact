@@ -1,16 +1,58 @@
-# React + Vite
+# ToDoReact
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React və Vite ilə qurulmuş sadə Todo (tapşırıq) tətbiqi. Ant Design komponentlərindən və Tailwind CSS-dən istifadə olunur.
 
-Currently, two official plugins are available:
+## Xüsusiyyətlər
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Tapşırıq əlavə etmə
+- Tapşırıqları siyahı şəklində göstərmə
+- Tapşırıq siyahısı boş olduqda xəbərdarlıq komponenti (`NotFoundComponent`)
+- Ant Design ikonları və komponentləri ilə müasir interfeys
 
-## React Compiler
+## Texnologiyalar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React 19](https://react.dev)
+- [Vite](https://vitejs.dev)
+- [Ant Design](https://ant.design)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Oxlint](https://oxc.rs)
 
-## Expanding the Oxlint configuration
+## Başlamaq üçün
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Asılılıqları quraşdırın:
+
+```bash
+npm install
+```
+
+Development server-i işə salın:
+
+```bash
+npm run dev
+```
+
+Production üçün build edin:
+
+```bash
+npm run build
+```
+
+Kodu lint yoxlamasından keçirin:
+
+```bash
+npm run lint
+```
+
+## Layihə strukturu
+
+```
+src/
+  Components/
+    db/todos.js       # Tapşırıqların data mənbəyi
+    ui/                # Köməkçi UI komponentləri (NotFoundComponent və s.)
+    todo.jsx           # Tək bir tapşırıq elementi
+    Todos.jsx          # Tapşırıqların siyahısı
+    Todoinput.jsx       # Yeni tapşırıq əlavə etmə forması
+  App.jsx
+  main.jsx
+```
